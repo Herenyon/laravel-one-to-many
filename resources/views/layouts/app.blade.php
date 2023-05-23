@@ -56,6 +56,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('admin.portf.index') }}">{{ __('All Repos') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('admin.types.index') }}">{{ __('All Languages') }}</a>
+                        </li>
                         @endauth
                     </ul>
 

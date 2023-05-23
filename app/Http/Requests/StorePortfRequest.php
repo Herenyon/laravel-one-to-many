@@ -30,7 +30,7 @@ class StorePortfRequest extends FormRequest
             'description' => 'string',
             'image' => 'nullable|image|max:2048',
             'set_image' => 'boolean',
-            'type_id' => 'nullable|exist:types,id'
+            //'type_id' => 'nullable|exist:types,id',
 
         ];
     }
