@@ -14,11 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::table('portfs', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_id')->nullable()->after('id');
+            $table->unsignedBigInteger('type_id')->nullable()->after('id');
 
-            $table->foreign('category_id')
+            $table->foreign('type_id')
                 ->references('id')
-                ->on('categories');
+                ->on('types')
+                ->nullOnDelete();
         });
     }
 
@@ -30,8 +31,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('portfs', function (Blueprint $table) {
-            $table->dropForeign(['category_id']);
-            $table->dropColumn('category_id');
+            $table->dropForeign(['type_id']);
+            $table->dropColumn('type_id');
         });
     }
 };

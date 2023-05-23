@@ -29,7 +29,8 @@ class StorePortfRequest extends FormRequest
             'nickname' => 'string|max:50',
             'description' => 'string',
             'image' => 'nullable|image|max:2048',
-            'set_image' => 'boolean'
+            'set_image' => 'boolean',
+            'type_id' => 'nullable|exist:types,id'
 
         ];
     }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Portf;
 use App\Http\Requests\StorePortfRequest;
 use App\Http\Requests\UpdatePortfRequest;
+use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -29,7 +30,8 @@ class PortfController extends Controller
      */
     public function create()
     {
-        return view('admin.portfo.create');
+        $types = Type::all();
+        return view('admin.portfo.create', compact('types'));
     }
 
     /**
