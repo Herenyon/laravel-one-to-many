@@ -17,6 +17,7 @@ class PortfSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        Portf::truncate();
         for ($i = 0; $i < 10; $i++) {
             $portf = new Portf();
             $portf->repo_title = $faker->word;
